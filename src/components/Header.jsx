@@ -3,13 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {
-  Link,
-} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {Row} from "react-bootstrap";
 
 function Header() {
   return (
-    <Navbar bg="dark" expand="md" variant={'dark'}>
+    <Row>
+      <Navbar bg="dark" expand="md" variant={'dark'}>
       <Container fluid className={'m-2'}>
         <Navbar.Brand className={'me-4'}>
           <Link to={'/'} style={{textDecoration: "none", color: "white"}}>Books</Link>
@@ -41,6 +41,7 @@ function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </Row>
   );
 }
 

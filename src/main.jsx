@@ -1,19 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 import {BrowserRouter} from "react-router-dom";
+import './index.css'
+import Container from "react-bootstrap/Container";
+import {Col, Row} from "react-bootstrap";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
-import Container from "react-bootstrap/Container";
 import Categories from "./components/Categories.jsx";
-import {Col, Row} from "react-bootstrap";
 import App from "./App.jsx";
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Container fluid={true} className={'p-0'}>
+      <Container fluid={true}>
         {/* Main Row */}
         <Header />
         <Row className={'mt-2 p-3'}>
