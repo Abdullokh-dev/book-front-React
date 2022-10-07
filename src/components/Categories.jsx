@@ -5,13 +5,13 @@ function Categories() {
     <Col xs={12} md={2}>
       <ListGroup as="ul">
         <ListGroup.Item as="li" active>
-          Klassika
+          Classic
         </ListGroup.Item>
-        <ListGroup.Item as="li">Detektiv</ListGroup.Item>
+        <ListGroup.Item as="li">Detective</ListGroup.Item>
         <ListGroup.Item as="li">
-          Fantastika
+          Fantastic
         </ListGroup.Item>
-        <ListGroup.Item as="li">Romantik</ListGroup.Item>
+        <ListGroup.Item as="li">Romantic</ListGroup.Item>
       </ListGroup>
     </Col>
   )
