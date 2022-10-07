@@ -8,7 +8,7 @@ import {Row} from "react-bootstrap";
 
 function Header() {
   return (
-    <Row>
+    <Row className={'fixed-top'}>
       <Navbar bg="dark" expand="md" variant={'dark'}>
       <Container fluid className={'m-2'}>
         <Navbar.Brand className={'me-4'}>
