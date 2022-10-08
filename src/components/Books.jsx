@@ -1,15 +1,18 @@
-import {useEffect} from "react";
-import {connect} from "react-redux";
-import {fetchBooks} from '../redux/reducers/index.jsx';
-import BookImg from '../assets/rich.png';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import {Col, Row} from "react-bootstrap";
-import {useNavigate} from "react-router-dom";
+import {useEffect} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import {fetchBooks} from '../redux/reducers/index.jsx'
+import BookImg from '../assets/rich.png'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import {Col, Row} from 'react-bootstrap'
+import {useNavigate} from 'react-router-dom'
 
-function Books({ booksData, fetchBooks }) {
+function Books() {
+  const booksData = useSelector(state => state.books)
+  const fetch = useDispatch()
+
   useEffect(() => {
-    fetchBooks()
+    fetch(fetchBooks())
   }, []);
 
   const navigate = useNavigate()
@@ -42,16 +45,4 @@ function Books({ booksData, fetchBooks }) {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    booksData: state.books
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchBooks: () => dispatch(fetchBooks())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Books);
+export default Books

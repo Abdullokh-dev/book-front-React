@@ -1,4 +1,4 @@
-import {Col, Pagination, Row} from "react-bootstrap";
+import {Col, Pagination, Row} from 'react-bootstrap'
 
 function PaginationBtn() {
   return(
@@ -18,4 +18,4 @@ function PaginationBtn() {
   )
 }
 
-export default PaginationBtn;
+export default PaginationBtn

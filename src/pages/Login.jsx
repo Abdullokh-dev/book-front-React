@@ -1,19 +1,20 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import {Col} from "react-bootstrap";
-import axios from "axios";
+import { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import {Col} from 'react-bootstrap'
+import axios from 'axios'
 const url = 'http://localhost:8888/api/users/auth'
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       const resp = await axios.post(url, {email, password})
       localStorage.setItem('token', resp.data.token)
+      window.location = '/'
     } catch (e) {
       if(e.response.data.code === 401) {
         alert('Email or Password is incorrect')
@@ -43,4 +44,4 @@ function Login() {
   )
 }
 
-export default Login;
+export default Login

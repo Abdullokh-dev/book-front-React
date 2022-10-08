@@ -1,10 +1,10 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import {Link} from "react-router-dom";
-import {Row} from "react-bootstrap";
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import {Link} from 'react-router-dom'
+import {Row} from 'react-bootstrap'
 
 function Header() {
   return (
@@ -45,4 +45,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header

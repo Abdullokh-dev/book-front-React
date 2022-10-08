@@ -1,5 +1,5 @@
-import Books from "../components/Books.jsx";
-import PaginationBtn from "../components/PaginationBtn";
+import Books from '../components/Books.jsx'
+import PaginationBtn from '../components/PaginationBtn'
 
 function Home() {
   return(
@@ -10,4 +10,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Home

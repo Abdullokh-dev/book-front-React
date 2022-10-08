@@ -19,10 +19,16 @@ const fetchBooksFailure = (errorMsg) => ({
   payload: errorMsg
 })
 
-export const fetchBooks = () => {
+export const fetchBooks = (categoryId) => {
   return (dispatch) => {
     dispatch(fetchBooksRequest)
-    axios.get('http://localhost:8888/api/books', {
+    let categoryUrl = ''
+
+    if(categoryUrl !== null) {
+      categoryUrl = '?category=' + categoryId
+    }
+
+    axios.get('http://localhost:8888/api/books' + categoryUrl , {
       headers: {
         Authorization: 'bearer ' + localStorage.getItem('token')
       }
@@ -39,6 +45,7 @@ export const fetchBooks = () => {
         const errorMsg = error.message
         dispatch(fetchBooksFailure(errorMsg))
         alert(error.message)
+        window.location = '/login';
       })
   }
 }
